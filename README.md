@@ -21,10 +21,11 @@ You can use `yarn start` to start the app (it's a CRA).
 
 ## How to submit your solution
 
-- Create a new branch from the master branch and commit your changes.
-- File a new merge request with the master branch as target that includes all of your changes.
+- Fork this repository
+- Create a new branch called challenge-accepted/\<your-github-name\> from the master branch and commit your changes.
+- Create a new pull request with the master branch as target that includes all of your changes.
 
-This merge request will not be merged and is for reviewing purposes only.
-When everything is discussed and clear the merge request will be closed.
+This pull request will not be merged and is for reviewing purposes only.
+When everything is discussed and clear the pull request will be closed.
 
 Have fun :)
