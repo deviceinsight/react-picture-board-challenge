@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.scss';
+import {PictureList} from './containers/PictureList';
+import {Button} from './components/Button';
+import {shuffle} from './utils';
+
+const PICTURE_IDS = new Array(100).fill(0).map((_, index) => index);
 
 const App: React.FC = () => {
+  const [pictureIds, setPictureIds] = useState<number[]>(PICTURE_IDS);
+
+  const shufflePictureIds = () => {
+    const randomIds = shuffle<number>(pictureIds);
+    setPictureIds(randomIds);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+        <div>(In)finite Pictures!</div>
+        <Button className="shuffle-button" onClick={shufflePictureIds}>
+          Shuffle!
+        </Button>
+      </h1>
+      <PictureList pictureIds={pictureIds} />
     </div>
   );
-}
+};
 
 export default App;
