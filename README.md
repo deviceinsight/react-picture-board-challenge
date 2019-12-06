@@ -21,11 +21,21 @@ You can use `yarn start` to start the app (it's a CRA).
 
 ## How to submit your solution
 
+### Over Github
+
 - Fork this repository
 - Create a new branch called challenge-accepted/\<your-github-name\> from the master branch and commit your changes.
 - Create a new pull request with the master branch as target that includes all of your changes.
 
 This pull request will not be merged and is for reviewing purposes only.
 When everything is discussed and clear the pull request will be closed.
+
+### Over Email
+
+Once you're finished with the coding challenge, commit all of your changes to a branch of your choosing. Afterwards, use:
+
+`git archive --format=tar.gz HEAD > react-picture-board-challenge_your_name.tar.gz`
+
+to bundle the repository into a tar.gz file and send the file with your name to jobs@device-insight.com
 
 Have fun :)
